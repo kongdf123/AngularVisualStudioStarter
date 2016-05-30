@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>angular bootstrap</title>
+	<meta charset="utf-8" />
+	<script src="../scripts/angular.min.js"></script>
+	<script>
+		var rootModule = angular.module('module1', []);
+		rootModule.controller('controller1', ['$scope', function($scope) {
+			$scope.name = 'aty';
+		}]);
+
+		var m2 = angular.module('module2', []);
+		m2.controller('controller2', ['$scope', function($scope) {
+			$scope.name = 'tom';
+		}]);
+
+		angular.element(document).ready(function () {
+			angular.bootstrap(document.getElementById('div1'), ["module1"]);
+			angular.bootstrap(document.getElementById('div2'), ["module2"]);
+		});
+	</script>
+</head>
+<body>
+
+	<div id="div1" ng-controller="controller1">div1{{name}}</div>
+	<div id="div2" ng-controller="controller2">div2{{name}}</div>
+</body>
+</html>
