@@ -94,11 +94,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="assets\angular\angular.min.js.map" />
+    <Content Include="assets\angular\angular-resource.js" />
+    <Content Include="assets\angular\angular-resource.min.js" />
+    <Content Include="assets\angular\angular-route.js" />
+    <Content Include="assets\angular\angular-route.min.js" />
+    <Content Include="assets\angular\angular-route.min.js.map" />
+    <Content Include="assets\angular\angular-resource.min.js.map" />
+    <Content Include="scripts\app.module.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

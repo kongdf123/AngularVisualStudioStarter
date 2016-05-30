@@ -2,20 +2,19 @@
 
 	'use strict';
 
-	var app = angular.module('aspNetApp', []);
-	routeApp.config(['$routeProvider', function ($routeProvider) {
-		$routeProvider
-		.when('/home/index', {
-			templateUrl: 'index.html',
-			controller: 'homeController'
-		})
-		.when('/Account/Login', {
-			templateUrl: 'login.html',
-			controller: 'accountController'
-		})
-		.otherwise({
-			redirectTo: '/list'
-		});
-
-	}]);
+	var aspNetApp = angular.module('aspNetApp')
+		.config(['$locationProvider','$routeProvider', function ($routeProvider) {
+			$routeProvider
+			.when('/Account/Login', {
+				templateUrl: '/views/home/login.html',
+				controller: 'accountController'
+			})
+			.when('/home/index', {
+				templateUrl: '/views/home/index.html',
+				controller: 'homeController'
+			})
+			.otherwise({
+				redirectTo: '/Account/Login'
+			});
+		}]);
 })();
